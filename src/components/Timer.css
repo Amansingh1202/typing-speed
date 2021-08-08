@@ -1,0 +1,46 @@
+.timer-btn{
+    margin-left: 45%;
+    margin-top: 40px;
+    background-color: orange;
+    color:white;
+    font-size: 1.1em;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .timer-btn:hover{
+    background-color: magenta;
+  }
+
+  #mycounter{
+    background-color: red;
+    width:60px;
+    height: 60px;
+    margin-left: 40px;
+    border-radius: 50%;
+    color:white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.1em;
+  }
+
+  .result-section{
+    margin-top:-550px;
+    margin-left: 10px;
+    color:brown;
+    font-size: 1.2em;
+  }
+
+  #result{
+    width:40px;
+    height:40px;
+    background-color: lightgreen;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-top: 10px;
+    color:darkgreen;
+  }

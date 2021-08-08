@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect,useState} from "react"
+import TextPara from "./components/TextPara"
+import TypeText from "./components/TypeText"
+import Timer from "./components/Timer"
 
 function App() {
+
+  const [paraText,setParaText] = useState("");
+
+  useEffect(() => { 
+    fetch('https://random-word-api.herokuapp.com/word?number=30')
+    .then(response => response.json())
+    .then(data => {
+      const textData = data.join(' ')
+      setParaText(textData)
+    });
+  },[]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TextPara paraText={paraText} />
+      <TypeText paraText={paraText} />
+      <Timer />
     </div>
   );
 }
